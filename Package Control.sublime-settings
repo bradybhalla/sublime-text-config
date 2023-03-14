@@ -1,0 +1,25 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"0x0",
+		"AutoFoldCode",
+		"Git",
+		"LSP",
+		"LSP-pylsp",
+		"LSP-TexLab",
+		"LSP-typescript",
+		"Open Finder",
+		"Package Control",
+		"Python 3",
+		"sublime-matrix-calculator",
+		"Terminal",
+	],
+	"repositories":
+	[
+		"https://github.com/bradybhalla/sublime-matrix-calculator"
+	],
+}
