@@ -20,6 +20,7 @@ Note: This will overwrite the current preferences and packages.
 - Open Finder
 - Package Control
 - Python3
+- Sass
 - sublime-matrix-calculator (I made it!)
 - Terminal
 
