@@ -1,9 +1,8 @@
 // Settings in here override those in "LSP-typescript/LSP-typescript.sublime-settings"
 
-
-// these are things I (Brady) added
-
 {
+  // I added these vvv
+
   // use semicolons when formatting
   "settings": {
     "typescript.format.semicolons": "insert"

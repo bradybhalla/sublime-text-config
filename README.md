@@ -27,6 +27,7 @@ Note: This will overwrite the current preferences and packages.
 - `Cmd + I`: Hover for LSP information
 - `Cmd + E`: Jump to next LSP diagnostic
 - `Cmd + Shift + E`: Code action (quick fixes for diagnostic)
+- `Option + F`: Format file (using LSP)
 
 ### Additional Builds
 - Compile LaTeX

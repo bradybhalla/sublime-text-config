@@ -5,23 +5,30 @@
 	
 	// next error from lsp
 	{
-		"keys": ["primary+e"],
+		"keys": ["command+e"],
 		"command": "lsp_next_diagnostic",
 		"context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
 	},
 
 	// lsp quick fix
 	{
-	    "keys": ["primary+shift+e"],
+	    "keys": ["command+shift+e"],
 	    "command": "lsp_code_actions",
 	    "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider"}]
 	},
 
 	// simulate lsp hover
     {
-        "keys": ["primary+i"],
+        "keys": ["command+i"],
         "command": "lsp_hover",
         "context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
+    },
+
+    // Format file with lsp
+    {
+        "keys": ["option+f"],
+        "command": "lsp_format_document",
+        "context": [{"key": "lsp.session_with_capability", "operand": "documentFormattingProvider | documentRangeFormattingProvider"}]
     },
 
 
