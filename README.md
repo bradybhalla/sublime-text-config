@@ -11,6 +11,7 @@ Note: This will overwrite the current preferences and packages.
 
 ### Packages
 - 0x0
+  -  Quickly share code
 - AutoFoldCode
 - Git
 - LSP
@@ -21,18 +22,28 @@ Note: This will overwrite the current preferences and packages.
 - Package Control
 - Python3
 - Sass
-- sublime-matrix-calculator (I made it!)
+- sublime-matrix-calculator
+  - I made it!
 - Terminal
+  - Open iTerm
+- Terminus
+  - Terminal in Sublime Text
+  - Set up to use powerlevel10k and tmux
+  - May need to put "Terminus Utilities: Generate User Theme" in Command Palette to fix formatting
 
 ### Additional Keybinds
-- `Cmd + I`: Hover for LSP information
-- `Cmd + E`: Jump to next LSP diagnostic
-- `Cmd + Shift + E`: Code action (quick fixes for diagnostic)
+- ``Option + ` ``: Open Terminus panel
+- ``Option + Shift + ` ``: Open Terminus view
 - `Option + F`: Format file (using LSP)
+- `Option + I`: Hover for LSP information
+- `Option + E`: Jump to next LSP diagnostic
+- `Option + Shift + E`: Code action (quick fixes for diagnostic)
 
 ### Additional Builds
-- Compile LaTeX
-- npm run dev
+- LaTeX
+  - Using `pdflatex`
+- Markdown
+  - Using `pandoc` (which must be installed through Homebrew for this build)
 
 ### Additional Snippets
-- Snippets for accelerating my LaTeX writing
+- Snippets for accelerating LaTeX writing
