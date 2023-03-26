@@ -24,26 +24,27 @@ Note: This will overwrite the current preferences and packages.
 - Sass
 - sublime-matrix-calculator
   - I made it!
-- Terminal
-  - Open iTerm
 - Terminus
   - Terminal in Sublime Text
   - Set up to use powerlevel10k and tmux
   - May need to put "Terminus Utilities: Generate User Theme" in Command Palette to fix formatting
 
 ### Additional Keybinds
-- ``Option + ` ``: Open Terminus panel
-- ``Option + Shift + ` ``: Open Terminus view
-- `Option + F`: Format file (using LSP)
-- `Option + I`: Hover for LSP information
-- `Option + E`: Jump to next LSP diagnostic
-- `Option + Shift + E`: Code action (quick fixes for diagnostic)
+- Terminus
+  - ``Option + ` ``: Open panel
+  - ``Option + Shift + ` ``: Open view
+  - `Option + Up` / `Option + Down`: Bring to view/panel
+- LSP
+  - `Option + F`: Format file
+  - `Command + I`: Simulate hover
+  - `Command + E`: Jump to next diagnostic
+  - `Command + Shift + E`: Code action (quick fixes for diagnostic)
 
 ### Additional Builds
 - LaTeX
   - Using `pdflatex`
 - Markdown
-  - Using `pandoc` (which must be installed through Homebrew for this build)
+  - Using `pandoc` (which must be installed through Homebrew)
 
 ### Additional Snippets
 - Snippets for accelerating LaTeX writing

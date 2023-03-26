@@ -12,6 +12,22 @@
         }
     },
 
+    // change Terminus to panel/view
+    {
+        "keys": ["option+up"],
+        "command": "terminus_maximize",
+        "context": [
+            {"key": "terminus_view"}
+        ]
+    },
+    {
+        "keys": ["option+down"],
+        "command": "terminus_minimize",
+        "context": [
+            {"key": "terminus_view"}
+        ]
+    },
+
     // Format file with lsp
     {
         "keys": ["option+f"],
@@ -21,21 +37,21 @@
 	
 	// next error from lsp
 	{
-		"keys": ["option+e"],
+		"keys": ["command+e"],
 		"command": "lsp_next_diagnostic",
 		"context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
 	},
 
 	// lsp quick fix
 	{
-	    "keys": ["option+shift+e"],
+	    "keys": ["command+shift+e"],
 	    "command": "lsp_code_actions",
 	    "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider"}]
 	},
 
 	// simulate lsp hover
     {
-        "keys": ["option+i"],
+        "keys": ["command+i"],
         "command": "lsp_hover",
         "context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
     },

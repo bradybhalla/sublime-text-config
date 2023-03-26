@@ -4,43 +4,32 @@
     "view_settings": {
         // works with powerlevel10k
         "font_face": "MesloLGS NF",
+        "font_size": 14,
+        "font_options": [
+            "no_antialias"
+        ],
     },
 
-    // coloring is okay if you use this theme
-    // "theme": "nightlion-v2",
-
-    // define my own theme so coloring works
+    // same colors as iTerm
+    "256color": true,
+    "brighten_bold_text": false,
     "theme": "user",
     "user_theme_colors": {
-        "background": "#363636", // changed
-        "foreground": "#ffffff",
+        "background": "#000000",
+        "foreground": "#c8c8c8",
+
         "caret": "white",
         "block_caret": "white",
-        "selection": "#444444",
-        "selection_foreground": "#ffffff",
-        "black": "#000000",
-        "red": "#cd0000",
-        "green": "#00cd00",
-        "brown": "#cdcd00",
-        "blue": "#3070ff", // changed
-        "magenta": "#cd00cd",
-        "cyan": "#00cdcd",
-        "white": "#e5e5e5",
-        "light_black": "#000000", // changed
-        "light_red": "#ff0000",
-        "light_green": "#00ff00",
-        "light_brown": "#ffff00",
-        "light_blue": "#0096FF", // changed
-        "light_magenta": "#ff00ff",
-        "light_cyan": "#00ffff",
-        "light_white": "#ffffff",
+
+        "selection": "#c1ddff",
+        "selection_foreground": "#000000",
     },
 
     // start with tmux
     "shell_configs": [
         {
             "name": "Zsh Tmux",
-            "cmd": ["zsh", "-l", "-i", "-c", "tmux"],
+            "shell_cmd": "zsh -li -c \"tmux -2\"",
             "env": {},
             "enable": true,
             "platforms": ["linux", "osx"],
@@ -50,4 +39,5 @@
     "default_config": {
         "osx": "Zsh Tmux",
     },
+    
 }
