@@ -56,6 +56,22 @@
         "context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
     },
 
+    // Custom layout (also in Main.sublime-menu)
+    {
+        "keys": ["command+option+5"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 0.5, 1.0 ],
+            "rows": [0.0, 0.5, 1.0 ],
+            "cells": [
+                [0, 0, 1, 1 ],
+                [0, 1, 1, 2 ],
+                [1, 0, 2, 2 ]
+            ]
+        }
+    },
+
 
     // make ending "$" in LaTeX
     {

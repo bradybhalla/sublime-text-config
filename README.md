@@ -29,7 +29,7 @@ Note: This will overwrite the current preferences and packages.
   - Set up to use powerlevel10k and tmux
   - May need to put "Terminus Utilities: Generate User Theme" in Command Palette to fix formatting
 
-### Additional Keybinds
+### Keybinds
 - Terminus
   - ``Option + ` ``: Open panel
   - ``Option + Shift + ` ``: Open view
@@ -40,11 +40,15 @@ Note: This will overwrite the current preferences and packages.
   - `Command + E`: Jump to next diagnostic
   - `Command + Shift + E`: Code action (quick fixes for diagnostic)
 
-### Additional Builds
+### Builds
 - LaTeX
   - Using `pdflatex`
 - Markdown
   - Using `pandoc` (which must be installed through Homebrew)
 
-### Additional Snippets
+### Snippets
 - Snippets for accelerating LaTeX writing
+
+### Menu items
+- Additional layouts
+  - View -> Layout -> Rotated Face `Command + Option + 5`

@@ -1,0 +1,42 @@
+// I added these vvv
+
+[
+    // Layout that looks like 
+
+    // __________
+    // |    |   |
+    // |____|   |
+    // |    |   |
+    // |____|___|
+
+    {
+        "caption": "View",
+        "mnemonic": "V",
+        "id": "view",
+        "children":
+        [
+            {
+                "caption": "Layout",
+                "mnemonic": "L",
+                "id": "layout",
+                "children":
+                [
+                    {
+                        "caption": "Rotated Face",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 0.5, 1.0 ],
+                            "rows": [0.0, 0.5, 1.0 ],
+                            "cells": [
+                                [0, 0, 1, 1 ],
+                                [0, 1, 1, 2 ],
+                                [1, 0, 2, 2 ]
+                            ]
+                        }
+                    }
+                ]
+            },
+        ]
+    }
+]

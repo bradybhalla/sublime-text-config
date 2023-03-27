@@ -10,6 +10,4 @@
 	// I added these vvv
 	"translate_tabs_to_spaces": true,
 	"auto_complete_commit_on_tab": true,
-	"theme": "auto",
-	"close_windows_when_empty": true,
 }
