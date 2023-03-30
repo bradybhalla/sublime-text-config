@@ -2,38 +2,40 @@
 
 	// I added these vvv
 
+  {"keys": ["command+shift+m"], "command": "toggle_minimap"},
+
 	// open Terminus panel
 	{ "keys": ["option+`"], "command": "toggle_terminus_panel"},
 
 	// open Terminus view
 	{
-        "keys": ["option+shift+`"], "command": "terminus_open", "args": {
-            "cwd": "${file_path:${folder}}"
-        }
-    },
+    "keys": ["option+shift+`"], "command": "terminus_open", "args": {
+      "cwd": "${file_path:${folder}}"
+    }
+  },
 
-    // change Terminus to panel/view
-    {
-        "keys": ["option+up"],
-        "command": "terminus_maximize",
-        "context": [
-            {"key": "terminus_view"}
-        ]
-    },
-    {
-        "keys": ["option+down"],
-        "command": "terminus_minimize",
-        "context": [
-            {"key": "terminus_view"}
-        ]
-    },
+  // change Terminus to panel/view
+  {
+    "keys": ["option+up"],
+    "command": "terminus_maximize",
+    "context": [
+      {"key": "terminus_view"}
+    ]
+  },
+  {
+    "keys": ["option+down"],
+    "command": "terminus_minimize",
+    "context": [
+      {"key": "terminus_view"}
+    ]
+  },
 
-    // Format file with lsp
-    {
-        "keys": ["option+f"],
-        "command": "lsp_format_document",
-        "context": [{"key": "lsp.session_with_capability", "operand": "documentFormattingProvider | documentRangeFormattingProvider"}]
-    },
+  // Format file with lsp
+  {
+    "keys": ["option+f"],
+    "command": "lsp_format_document",
+    "context": [{"key": "lsp.session_with_capability", "operand": "documentFormattingProvider | documentRangeFormattingProvider"}]
+  },
 	
 	// next error from lsp
 	{
@@ -44,45 +46,45 @@
 
 	// lsp quick fix
 	{
-	    "keys": ["command+shift+e"],
-	    "command": "lsp_code_actions",
-	    "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider"}]
+	  "keys": ["command+shift+e"],
+	  "command": "lsp_code_actions",
+	  "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider"}]
 	},
 
 	// simulate lsp hover
+  {
+    "keys": ["command+i"],
+    "command": "lsp_hover",
+    "context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
+  },
+
+  // Custom layout (also in Main.sublime-menu)
+  {
+    "keys": ["command+option+5"],
+    "command": "set_layout",
+    "args":
     {
-        "keys": ["command+i"],
-        "command": "lsp_hover",
-        "context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
-    },
-
-    // Custom layout (also in Main.sublime-menu)
-    {
-        "keys": ["command+option+5"],
-        "command": "set_layout",
-        "args":
-        {
-            "cols": [0.0, 0.5, 1.0 ],
-            "rows": [0.0, 0.5, 1.0 ],
-            "cells": [
-                [0, 0, 1, 1 ],
-                [0, 1, 1, 2 ],
-                [1, 0, 2, 2 ]
-            ]
-        }
-    },
+      "cols": [0.0, 0.5, 1.0 ],
+      "rows": [0.0, 0.5, 1.0 ],
+      "cells": [
+        [0, 0, 1, 1 ],
+        [0, 1, 1, 2 ],
+        [1, 0, 2, 2 ]
+      ]
+    }
+  },
 
 
-    // make ending "$" in LaTeX
-    {
-    	"keys": ["$"],
-    	"command": "insert_snippet",
-    	"args": {"contents": "\\$${0:$SELECTION}\\$"},
-    	"context": [{"key":"selector", "operand":"text.tex.latex"}]
-    },
+  // make ending "$" in LaTeX
+  {
+  	"keys": ["$"],
+  	"command": "insert_snippet",
+  	"args": {"contents": "\\$${0:$SELECTION}\\$"},
+  	"context": [{"key":"selector", "operand":"text.tex.latex"}]
+  },
 
-    // don't autocomplete on tab if there is a next field in LaTeX
-    { "keys": ["tab"], "command": "next_field", "context":
+  // don't autocomplete on tab if there is a next field in LaTeX
+  { "keys": ["tab"], "command": "next_field", "context":
 		[
 			{"key":"selector", "operand":"text.tex.latex"},
 			{ "key": "has_next_field", "operator": "equal", "operand": true }

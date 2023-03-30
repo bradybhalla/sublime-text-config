@@ -9,6 +9,8 @@
 		"AutoFoldCode",
 		"Git",
 		"LSP",
+		"LSP-clangd",
+		"LSP-json",
 		"LSP-pylsp",
 		"LSP-TexLab",
 		"LSP-typescript",

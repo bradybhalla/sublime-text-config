@@ -1,6 +1,0 @@
-// These settings override both User and Default settings for the Markdown syntax
-{
-    // I added these vvv
-
-    "tab_size": 2
-}

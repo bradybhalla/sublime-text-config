@@ -15,6 +15,8 @@ Note: This will overwrite the current preferences and packages.
 - AutoFoldCode
 - Git
 - LSP
+- LSP-clangd
+- LSP-json
 - LSP-pylsp
 - LSP-TexLab
 - LSP-typescript
@@ -39,6 +41,9 @@ Note: This will overwrite the current preferences and packages.
   - `Command + I`: Simulate hover
   - `Command + E`: Jump to next diagnostic
   - `Command + Shift + E`: Code action (quick fixes for diagnostic)
+- Other
+  - `Command + Ctrl + M`: Merge windows (Keyboard Maestro)
+  - `Command + Shift + M`: Toggle minimap
 
 ### Builds
 - LaTeX
