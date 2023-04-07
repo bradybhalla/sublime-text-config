@@ -24,6 +24,7 @@ Note: This will overwrite the current preferences and packages.
 - Package Control
 - Python3
 - Sass
+- SFTP
 - sublime-matrix-calculator
   - I made it!
 - Terminus
@@ -44,6 +45,7 @@ Note: This will overwrite the current preferences and packages.
 - Other
   - `Command + Ctrl + M`: Merge windows (Keyboard Maestro)
   - `Command + Shift + M`: Toggle minimap
+  - `Command + Shift + O`: Open finder here
 
 ### Builds
 - LaTeX
@@ -51,9 +53,6 @@ Note: This will overwrite the current preferences and packages.
 - Markdown
   - Using `pandoc` (which must be installed through Homebrew)
 
-### Snippets
-- Snippets for accelerating LaTeX writing
-
 ### Menu items
 - Additional layouts
-  - View -> Layout -> Rotated Face `Command + Option + 5`
+  - View $\to$ Layout $\to$ Rotated Face `Command + Option + 5`
