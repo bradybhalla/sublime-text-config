@@ -1,0 +1,84 @@
+[
+  // make ending "$" in LaTeX
+  {
+  	"keys": ["$"],
+  	"command": "insert_snippet",
+  	"args": {"contents": "\\$${0:$SELECTION}\\$"},
+  	"context": [{"key":"selector", "operand":"text.tex.latex"}]
+  },
+
+  // new line with \noindent
+  {
+    "keys": ["shift+enter"],
+    "command": "insert_snippet",
+    "args": {"contents": "\\\\\\\\\n\n\\noindent "},
+    "context": [{"key":"selector", "operand":"text.tex.latex"}]
+  },
+
+  // #######################
+  // ## math mode commands #
+  // #######################
+
+  // parentheses
+  {
+  	"keys": ["("],
+  	"command": "insert_snippet",
+  	"args": {"contents": "\\left(${1:$SELECTION}\\right)$0"},
+  	"context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+  },
+   {
+  	"keys": [")"],
+  	"command": "next_field",
+  	"context": [
+  		{"key":"selector", "operand":"text.tex.latex meta.environment.math"},
+  		{"key":"following_text", "operator": "regex_match", "operand": "\\\\right\\).*$", "match_all": true }
+  	]
+  },
+
+  // braces
+  {
+  	"keys": ["\\", "{"],
+    "command": "insert_snippet",
+  	"args": {"contents": "\\left\\\\{${1:$SELECTION}\\right\\\\}$0"},
+  	"context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+  },
+   {
+  	"keys": ["\\", "}"],
+    "command": "next_field",
+  	"context": [
+  		{"key":"selector", "operand":"text.tex.latex meta.environment.math"},
+  		{"key":"following_text", "operator": "regex_match", "operand": "\\\\right\\\\\\}.*$", "match_all": true }
+  	]
+  },
+
+  // | with spaces around it
+  {
+  	"keys": ["|"],
+    "command": "insert_snippet",
+  	"args": {"contents": " \\,|\\, "},
+  	"context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+  },
+
+  // Two slashes to make selection the numerator in a frac
+  {
+    "keys": ["/","/"],
+    "command": "insert_snippet",
+    "args": {"contents": "\\frac{${1:$SELECTION}}{$2}$0"},
+    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+  },
+
+  // cdot instead of *
+  {
+    "keys": ["*"],
+    "command": "insert_snippet",
+    "args": {"contents": "\\cdot "},
+    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+  },
+  {
+    "keys": ["*", "*"],
+    "command": "insert_snippet",
+    "args": {"contents": "*"},
+    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+  }
+
+]

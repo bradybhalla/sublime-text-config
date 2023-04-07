@@ -1,0 +1,6 @@
+{
+    "shell_cmd": "/opt/homebrew/bin/pandoc --toc --standalone --css=\"$packages/User/Builds/pandoc.css\" --mathjax -f markdown -t html \"$file\" --metadata title=\"$file_name\" -o out.html && open out.html && sleep 2 && rm out.html",
+    "selector": "text.html.markdown",
+}
+
+

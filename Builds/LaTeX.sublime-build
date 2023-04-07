@@ -1,0 +1,4 @@
+{
+    "shell_cmd": "pdflatex -jobname=out \"$file\" && open out.pdf && rm out.aux out.log",
+    "selector": "text.tex.latex"
+}
