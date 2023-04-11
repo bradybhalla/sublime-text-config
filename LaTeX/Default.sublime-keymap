@@ -23,6 +23,27 @@
     "context": [{"key":"selector", "operand":"text.tex.latex"}]
   },
 
+  // delete line ending in RedNote (which I use to leave messages for myself)
+  // use "RedNote" or "Problem Part" snippet to create
+  {
+    "keys": ["backspace"],
+    "command": "run_macro_file",
+    "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"},
+    "context": [
+      {"key":"selector", "operand":"text.tex.latex"},
+      {"key":"following_text", "operator": "regex_match", "operand": ".*% RedNote$", "match_all": true }
+    ]
+  },
+  {
+    "keys": ["backspace"],
+    "command": "run_macro_file",
+    "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"},
+    "context": [
+      {"key":"selector", "operand":"text.tex.latex"},
+      {"key":"preceding_text", "operator": "regex_match", "operand": "^.*% RedNote", "match_all": true }
+    ]
+  },
+
   // #######################
   // ## math mode commands #
   // #######################

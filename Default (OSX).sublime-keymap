@@ -2,6 +2,12 @@
 
 	// I added these vvv
 
+  // simulate right click
+  {
+    "keys": ["ctrl", "ctrl"],
+    "command": "context_menu"
+  },
+
   // Expand to indentation (instead of smart expand)
   {
     "keys": ["command+shift+a"],

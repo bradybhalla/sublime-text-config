@@ -13,6 +13,7 @@ Note: This will overwrite the current preferences and packages.
 - 0x0
   -  Quickly share code
 - AutoFoldCode
+- Color Highlight
 - Git
 - LSP
 - LSP-clangd

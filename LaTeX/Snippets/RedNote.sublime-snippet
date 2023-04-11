@@ -1,8 +1,6 @@
 <snippet>
     <content><![CDATA[
-\begin{center}
-    \textcolor{red}{=======$1=======}
-\end{center}
+\begin{center}\textcolor{red}{=======${1:TODO}=======}\end{center} % RedNote
 
 $0
 ]]></content>
