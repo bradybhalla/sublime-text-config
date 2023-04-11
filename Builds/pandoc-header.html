@@ -1,0 +1,73 @@
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $(()=>{
+    // keep <p> right after header next to it
+    if ($("body").children().length > 2){
+      const third = $($("body").children()[2]);
+      if (third.is("p")){
+        third.appendTo($("header"));
+      }
+    }
+
+    // click to copy <code> / <pre>
+    $("pre, code").mousedown(function(){
+      navigator.clipboard.writeText($(this).text());
+      $(this).addClass("lighten");
+    });
+    $("pre, code").on("mouseup mouseleave", function(){
+      $(this).removeClass("lighten");
+    });
+  });
+</script>
+
+<style>
+
+  :root {
+    --background-color: rgb(60, 60, 60);
+    --text-color: rgb(200, 200, 200);
+
+    --link-color: rgb(173, 216, 230);
+
+    --code-background-color: rgb(30, 30, 30);
+    --code-lighten-color: rgb(80, 80, 80);
+
+    --nav-background-color: rgba(173, 216, 230, 0.06);
+  }
+
+  html {
+    background: var(--background-color);
+    color: var(--text-color);
+  }
+
+  a, a:visited {
+    color: var(--link-color);
+  }
+
+  nav {
+    border: 1px solid var(--link-color);
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: var(--nav-background-color);
+  }
+
+  pre {
+    padding: 10px;
+    background: var(--code-background-color);
+    cursor: pointer;
+  }
+
+  code {
+    background: var(--code-background-color);
+    font: monospace;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .lighten {
+    background: var(--code-lighten-color);
+  }
+
+</style>

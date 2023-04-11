@@ -2,6 +2,14 @@
 
 	// I added these vvv
 
+  // Expand to indentation (instead of smart expand)
+  {
+    "keys": ["command+shift+a"],
+    "command": "expand_selection",
+    "args": {"to":"indentation"}
+  },
+
+
   {"keys": ["command+shift+m"], "command": "toggle_minimap"},
 
 	// open Terminus panel

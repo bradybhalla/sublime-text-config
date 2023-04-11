@@ -1,11 +1,13 @@
 <snippet>
     <content><![CDATA[
-\documentclass[12pt]{article}
+\documentclass[a4paper, 12pt]{article}
+\usepackage{fullpage}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{graphicx}
+\usepackage{xcolor}
 
 
 \title{${1:CS 21 Set 1}}

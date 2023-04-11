@@ -14,4 +14,6 @@
         "texlab.auxDirectory": "ignore",
     },
     "enabled": true,
+
+    "auto_complete_selector": "text.tex - meta.section", // should equal selector in latex settings
 }

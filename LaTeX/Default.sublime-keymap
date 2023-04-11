@@ -7,17 +7,37 @@
   	"context": [{"key":"selector", "operand":"text.tex.latex"}]
   },
 
+  // display space
+  {
+    "keys": ["shift+space"],
+    "command": "insert",
+    "args": {"characters": "\\ "},
+    "context": [{"key":"selector", "operand":"text.tex.latex"}]
+  },
+
   // new line with \noindent
   {
     "keys": ["shift+enter"],
-    "command": "insert_snippet",
-    "args": {"contents": "\\\\\\\\\n\n\\noindent "},
+    "command": "insert",
+    "args": {"characters": "\\\\\n\n\\noindent "},
     "context": [{"key":"selector", "operand":"text.tex.latex"}]
   },
 
   // #######################
   // ## math mode commands #
   // #######################
+
+  // new line
+  {
+    "keys": ["enter"],
+    "command": "insert",
+    "args": {"characters": "\\\\\n"},
+    "context": [
+      {"key":"selector", "operand":"text.tex.latex meta.environment.math"},
+      {"key":"preceding_text", "operator": "not_regex_contains", "operand": "\\$", "match_all": true },
+      {"key":"following_text", "operator": "not_regex_contains", "operand": "\\$", "match_all": true }
+    ]
+  },
 
   // parentheses
   {
@@ -51,33 +71,55 @@
   	]
   },
 
-  // | with spaces around it
+  // | with space around it
   {
-  	"keys": ["|"],
-    "command": "insert_snippet",
-  	"args": {"contents": " \\,|\\, "},
+  	"keys": [" ", "|"],
+    "command": "insert",
+  	"args": {"characters": " \\,|\\, "},
   	"context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
   },
 
-  // Two slashes to make selection the numerator in a frac
+  // fraction
   {
     "keys": ["/","/"],
     "command": "insert_snippet",
-    "args": {"contents": "\\frac{${1:$SELECTION}}{$2}$0"},
+    "args": {"contents": "\\frac{${1:$SELECTION}}{$0}"},
     "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
   },
 
   // cdot instead of *
   {
     "keys": ["*"],
-    "command": "insert_snippet",
-    "args": {"contents": "\\cdot "},
+    "command": "insert",
+    "args": {"characters": "\\cdot "},
     "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
   },
   {
-    "keys": ["*", "*"],
-    "command": "insert_snippet",
-    "args": {"contents": "*"},
+    "keys": ["\\", "*"],
+    "command": "insert",
+    "args": {"characters": "*"},
+    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+  },
+
+  // ~~ is \approx
+  {
+    "keys": ["~", "~"],
+    "command": "insert",
+    "args": {"characters": "\\approx "},
+    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+  },
+  {
+    "keys": ["\\", "*"],
+    "command": "insert",
+    "args": {"characters": "*"},
+    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+  },
+
+  // two d's = \mathrm{d}
+  {
+    "keys": ["d", "d"],
+    "command": "insert",
+    "args": {"characters": "\\mathrm{d}"},
     "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
   }
 
