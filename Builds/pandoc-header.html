@@ -18,6 +18,25 @@
     $("pre, code").on("mouseup mouseleave", function(){
       $(this).removeClass("lighten");
     });
+
+
+    
+    $("ol").each(function(){
+      // my browser is doing annoying case insensitive things
+      if ($(this).attr("type") == "A"){
+        $(this).attr("type", "a_upper")
+      } else if ($(this).attr("type") == "I"){
+        $(this).attr("type", "i_upper")
+      }
+
+      // start list at non-zero item
+      let start = 0;
+      if ($(this).attr("start")){
+        start = $(this).attr("start") - 1;
+      }
+      $(this).css("counter-reset","li " + start);
+    });
+
   });
 </script>
 
@@ -28,11 +47,12 @@
     --text-color: rgb(200, 200, 200);
 
     --link-color: rgb(173, 216, 230);
+    --nav-background-color: rgba(173, 216, 230, 0.06);
 
     --code-background-color: rgb(30, 30, 30);
     --code-lighten-color: rgb(80, 80, 80);
 
-    --nav-background-color: rgba(173, 216, 230, 0.06);
+    --list-mark-color: rgb(120, 120, 120);
   }
 
   html {
@@ -40,24 +60,29 @@
     color: var(--text-color);
   }
 
+  /*#################
+    # Links and nav #
+    ################# */
   a, a:visited {
     color: var(--link-color);
   }
-
   nav {
     border: 1px solid var(--link-color);
     border-radius: 5px;
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 30px;
     background-color: var(--nav-background-color);
   }
 
+
+  /*###################
+    # Code formatting #
+    ###################*/
   pre {
     padding: 10px;
     background: var(--code-background-color);
     cursor: pointer;
   }
-
   code {
     background: var(--code-background-color);
     font: monospace;
@@ -65,9 +90,66 @@
     border-radius: 3px;
     cursor: pointer;
   }
-
   .lighten {
     background: var(--code-lighten-color);
   }
+
+
+  /*#########
+    # Lists #
+    #########*/
+  li {
+    padding: 2px;
+    text-indent: -10px;
+  }
+
+
+  ul, ol {
+    list-style-type: none;
+    list-style-position: outside;
+  }
+  ul > li:before, ol > li:before {
+    position: relative;
+    left: -10px;
+    font-size: 16px;
+    color: var(--list-mark-color);
+  }
+  ul > li:before {
+    content: "•";
+    top: 1px;
+  }
+  nav ul > li:before {
+    content: "";
+  }
+
+  ol {
+    counter-reset: li
+  }
+  ol > li {
+    counter-increment: li
+  }
+  ol[type="1"] > li:before {
+    content: counter(li)".";
+  }
+  ol[type="a"] > li:before {
+    content: counter(li, lower-alpha)".";
+  }
+  ol[type="a_upper"] > li:before {
+    content: counter(li, upper-alpha)".";
+  }
+  ol[type="i"] > li:before {
+    content: counter(li, lower-roman)".";
+  }
+  ol[type="i_upper"] > li:before {
+    content: counter(li, upper-roman)".";
+  }
+
+
+  /*##########
+    # Tables #
+    ##########*/
+
+/*  TODO*/
+
 
 </style>
