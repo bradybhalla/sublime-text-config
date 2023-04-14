@@ -1,10 +1,10 @@
 [
   // make ending "$" in LaTeX
   {
-  	"keys": ["$"],
-  	"command": "insert_snippet",
-  	"args": {"contents": "\\$${0:$SELECTION}\\$"},
-  	"context": [{"key":"selector", "operand":"text.tex.latex"}]
+    "keys": ["$"],
+    "command": "insert_snippet",
+    "args": {"contents": "\\$${0:$SELECTION}\\$"},
+    "context": [{"key":"selector", "operand":"text.tex.latex"}]
   },
   {
     "keys": ["backspace"],
@@ -104,36 +104,36 @@
 
   // parentheses
   {
-  	"keys": ["("],
-  	"command": "insert_snippet",
-  	"args": {"contents": "\\left(${0:$SELECTION}\\right)"},
-  	"context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+    "keys": ["("],
+    "command": "insert_snippet",
+    "args": {"contents": "\\left(${0:$SELECTION}\\right)"},
+    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
   },
   {
-  	"keys": [")"],
+    "keys": [")"],
     "command": "run_macro_file",
     "args": {"file": "Packages/User/LaTeX/Macros/jump right.sublime-macro"},
-  	"context": [
-  		{"key":"selector", "operand":"text.tex.latex meta.environment.math"},
-  		{"key":"following_text", "operator": "regex_match", "operand": "\\\\right\\).*$", "match_all": true }
-  	]
+    "context": [
+      {"key":"selector", "operand":"text.tex.latex meta.environment.math"},
+      {"key":"following_text", "operator": "regex_match", "operand": "\\\\right\\).*$", "match_all": true }
+    ]
   },
 
   // visible braces
   {
-  	"keys": ["\\", "{"],
+    "keys": ["\\", "{"],
     "command": "insert_snippet",
-  	"args": {"contents": "\\left\\\\{${0:$SELECTION}\\right\\\\}"},
-  	"context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+    "args": {"contents": "\\left\\\\{${0:$SELECTION}\\right\\\\}"},
+    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
   },
   {
-  	"keys": ["\\", "}"],
+    "keys": ["\\", "}"],
     "command": "run_macro_file",
     "args": {"file": "Packages/User/LaTeX/Macros/jump right.sublime-macro"},
-  	"context": [
-  		{"key":"selector", "operand":"text.tex.latex meta.environment.math"},
-  		{"key":"following_text", "operator": "regex_match", "operand": "\\\\right\\\\\\}.*$", "match_all": true }
-  	]
+    "context": [
+      {"key":"selector", "operand":"text.tex.latex meta.environment.math"},
+      {"key":"following_text", "operator": "regex_match", "operand": "\\\\right\\\\\\}.*$", "match_all": true }
+    ]
   },
 
   // superscript and subscript grouping
@@ -152,10 +152,10 @@
 
   // | with space around it
   {
-  	"keys": [" ", "|"],
+    "keys": [" ", "|"],
     "command": "insert",
-  	"args": {"characters": " \\,|\\, "},
-  	"context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+    "args": {"characters": " \\,|\\, "},
+    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
   },
 
   // fractions

@@ -1,7 +1,9 @@
 [
-  /*###########
-    # General #
-    ###########*/
+  /*
+  ###########
+  # General #
+  ###########
+  */
 
   // simulate right click
   {
@@ -15,14 +17,16 @@
 
 
 
-  /*############
-    # Terminus #
-    ############*/
+  /*
+  ############
+  # Terminus #
+  ############
+  */
 
-	{ "keys": ["option+`"], "command": "toggle_terminus_panel" },
+  { "keys": ["option+`"], "command": "toggle_terminus_panel" },
 
-	// open Terminus view (as a tab)
-	{
+    // open Terminus view (as a tab)
+    {
     "keys": ["option+shift+`"], "command": "terminus_open", "args": {
       "cwd": "${file_path:${folder}}"
     }
@@ -46,29 +50,30 @@
 
 
 
-
-  /*#######
-    # LSP #
-    #######*/
+  /*
+  #######
+  # LSP #
+  #######
+  */
 
   {
     "keys": ["option+f"],
     "command": "lsp_format_document",
     "context": [{"key": "lsp.session_with_capability", "operand": "documentFormattingProvider | documentRangeFormattingProvider"}]
   },
-	
-	{
-		"keys": ["command+e"],
-		"command": "lsp_next_diagnostic",
-		"context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
-	},
 
-	// lsp quick fix
-	{
-	  "keys": ["command+shift+e"],
-	  "command": "lsp_code_actions",
-	  "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider"}]
-	},
+  {
+    "keys": ["command+es"],
+        "command": "lsp_next_diagnostic",
+        "context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
+    },
+
+    // lsp quick fix
+    {
+      "keys": ["command+shift+e"],
+      "command": "lsp_code_actions",
+      "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider"}]
+    },
 
   {
     "keys": ["ctrl", "ctrl"],
@@ -81,9 +86,11 @@
 
 
 
-  /*#########
-    # Other #
-    #########*/
+  /*
+  #########
+  # Other #
+  #########
+  */
 
   // Custom layout (also in Main.sublime-menu)
   {
