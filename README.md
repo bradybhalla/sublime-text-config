@@ -25,7 +25,7 @@ Note: This will overwrite the current preferences and packages.
 - Color scheme to make headers more visible
 
 ### Packages
-- LSP (and various languages)
+- LSP (with various languages)
 - Terminus
   - Terminal in Sublime Text
   - Set up to use powerlevel10k and tmux
@@ -39,7 +39,7 @@ Note: This will overwrite the current preferences and packages.
 
 ### Keybinds
 - Terminus, LSP, and more
-- *see all keybinds in* [Default (OSX).sublime-keymap](Default (OSX).sublime-keymap)
+- *see all keybinds in* [Default (OSX).sublime-keymap](Default \(OSX\).sublime-keymap)
 
 ### Other notes
 - Additional layouts
