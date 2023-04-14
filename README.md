@@ -35,11 +35,11 @@ Note: This will overwrite the current preferences and packages.
 - Color Highlight
 - AutoFoldCode
   - Store folded code and selections
-- *see all packages in* [Package Control.sublime-settings](Package Control.sublime-settings)
+- *see all packages in* [Package Control.sublime-settings](Package%20Control.sublime-settings)
 
 ### Keybinds
 - Terminus, LSP, and more
-- *see all keybinds in* [Default (OSX).sublime-keymap](Default \(OSX\).sublime-keymap)
+- *see all keybinds in* [Default (OSX).sublime-keymap](Default%20(OSX).sublime-keymap)
 
 ### Other notes
 - Additional layouts
