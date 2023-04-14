@@ -1,4 +1,0 @@
-{
-    "shell_cmd": "/opt/homebrew/bin/pandoc --toc --standalone --highlight-style=\"$packages/User/Builds/pandoc-highlight-style.theme\" --include-in-header=\"$packages/User/Builds/pandoc-header.html\" --shift-heading-level-by=-1 --mathjax -f markdown -t html \"$file\" -o out.html && open out.html && sleep 2 && rm out.html",
-    "selector": "text.html.markdown",
-}

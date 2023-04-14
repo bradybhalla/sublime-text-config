@@ -1,0 +1,33 @@
+{
+  "variables":
+  {
+  },
+  "globals":
+  {
+  },
+  "rules":
+  [
+    // Added highlight of lines with headers
+    {
+      "name": "Header 1",
+      "scope": "text.html.markdown markup.heading.1.markdown",
+      "background": "color(var(black))",
+      "foreground": "color(var(white3))",
+      "font_style": "bold glow"
+    },
+    {
+      "name": "Header 2",
+      "scope": "text.html.markdown markup.heading.2.markdown",
+      "background": "color(var(black) alpha(0.5))",
+      "foreground": "color(var(white3))",
+      "font_style": "bold"
+    },
+    {
+      "name": "Header 3",
+      "scope": "text.html.markdown markup.heading.3.markdown",
+      "background": "color(var(black) alpha(0.2))",
+      "foreground": "color(var(white3))",
+      "font_style": "bold"
+    }
+  ]
+}

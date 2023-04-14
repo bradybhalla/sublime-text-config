@@ -1,6 +1,6 @@
 # sublime-text-config
 
-## Setup instructions
+## Setup Instructions
 1) Move the contents of this repository to the `User` folder.  On macOS, this is probably located at `~/Library/Application\ Support/Sublime\ Text/Packages/User`.
 2) Open the command palette (`Cmd + Shift + P`) and type `Install Package Control` if Package Control is not already installed.
 3) Restart Sublime Text.
@@ -9,51 +9,41 @@ Note: This will overwrite the current preferences and packages.
 
 ## Configuration
 
+### Syntax specific configs
+#### LaTeX
+- "LaTeX" build system to compile and view pdf
+  - Uses `pdflatex`
+- Keybinds to make writing more natural ([LaTeX/Default.sublime-keymap](LaTeX/Default.sublime-keymap))
+- Additional snippets ([LaTeX/Snippets](LaTeX/Snippets))
+
+#### Markdown
+- "Markdown" build system to compile and view HTML
+  - Uses `pandoc` (installed with Homebrew)
+  - Nicely styled page
+  - Code can be copied by clicking
+  - Deletes HTML after build
+- Color scheme to make headers more visible
+
 ### Packages
-- 0x0
-  -  Quickly share code
-- AutoFoldCode
-- Color Highlight
-- Git
-- LSP
-- LSP-clangd
-- LSP-json
-- LSP-pylsp
-- LSP-TexLab
-- LSP-typescript
-- Open Finder
-- Package Control
-- Python3
-- Sass
-- SFTP
-- sublime-matrix-calculator
-  - I made it!
+- LSP (and various languages)
 - Terminus
   - Terminal in Sublime Text
   - Set up to use powerlevel10k and tmux
-  - May need to put "Terminus Utilities: Generate User Theme" in Command Palette to fix formatting
+  - May need to run "Terminus Utilities: Generate User Theme" in Command Palette to fix formatting
+- sublime-matrix-calculator
+  - I made it!
+- Color Highlight
+- AutoFoldCode
+  - Store folded code and selections
+- *see all packages in* [Package Control.sublime-settings](Package Control.sublime-settings)
 
 ### Keybinds
-- Terminus
-  - ``Option + ` ``: Open panel
-  - ``Option + Shift + ` ``: Open view
-  - `Option + Up` / `Option + Down`: Bring to view/panel
-- LSP
-  - `Option + F`: Format file
-  - `Command + I`: Simulate hover
-  - `Command + E`: Jump to next diagnostic
-  - `Command + Shift + E`: Code action (quick fixes for diagnostic)
-- Other
-  - `Command + Ctrl + M`: Merge windows (Keyboard Maestro)
-  - `Command + Shift + M`: Toggle minimap
-  - `Command + Shift + O`: Open finder here
+- Terminus, LSP, and more
+- *see all keybinds in* [Default (OSX).sublime-keymap](Default (OSX).sublime-keymap)
 
-### Builds
-- LaTeX
-  - Using `pdflatex`
-- Markdown
-  - Using `pandoc` (which must be installed through Homebrew)
-
-### Menu items
+### Other notes
 - Additional layouts
-  - View $\to$ Layout $\to$ Rotated Face `Command + Option + 5`
+  - View $\to$ Layout $\to$ Rotated Face
+- Various syntax specific modifications
+- Tab for autocomplete
+- Made for macOS

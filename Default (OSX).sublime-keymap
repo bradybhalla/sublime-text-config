@@ -1,6 +1,7 @@
 [
-
-	// I added these vvv
+  /*###########
+    # General #
+    ###########*/
 
   // simulate right click
   {
@@ -8,27 +9,26 @@
     "command": "context_menu"
   },
 
-  // Expand to indentation (instead of smart expand)
-  {
-    "keys": ["command+shift+a"],
-    "command": "expand_selection",
-    "args": {"to":"indentation"}
-  },
+  { "keys": ["command+shift+m"], "command": "toggle_minimap" },
+
+  { "keys": ["command+shift+o"], "command": "open_finder" },
 
 
-  {"keys": ["command+shift+m"], "command": "toggle_minimap"},
 
-	// open Terminus panel
-	{ "keys": ["option+`"], "command": "toggle_terminus_panel"},
+  /*############
+    # Terminus #
+    ############*/
 
-	// open Terminus view
+	{ "keys": ["option+`"], "command": "toggle_terminus_panel" },
+
+	// open Terminus view (as a tab)
 	{
     "keys": ["option+shift+`"], "command": "terminus_open", "args": {
       "cwd": "${file_path:${folder}}"
     }
   },
 
-  // change Terminus to panel/view
+  // Change Terminus panel/view to a view/panel
   {
     "keys": ["option+up"],
     "command": "terminus_maximize",
@@ -44,19 +44,19 @@
     ]
   },
 
-  {
-    "keys": ["command+shift+o"],
-    "command": "open_finder"
-  },
 
-  // Format file with lsp
+
+
+  /*#######
+    # LSP #
+    #######*/
+
   {
     "keys": ["option+f"],
     "command": "lsp_format_document",
     "context": [{"key": "lsp.session_with_capability", "operand": "documentFormattingProvider | documentRangeFormattingProvider"}]
   },
 	
-	// next error from lsp
 	{
 		"keys": ["command+e"],
 		"command": "lsp_next_diagnostic",
@@ -70,12 +70,20 @@
 	  "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider"}]
 	},
 
-	// simulate lsp hover
   {
-    "keys": ["command+i"],
+    "keys": ["ctrl", "ctrl"],
     "command": "lsp_hover",
-    "context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
+    "context": [
+      { "key" : "selector", "operand" : "-text.tex.latex" },
+      { "key": "lsp.session_with_capability", "operand": "hoverProvider" }
+    ]
   },
+
+
+
+  /*#########
+    # Other #
+    #########*/
 
   // Custom layout (also in Main.sublime-menu)
   {
