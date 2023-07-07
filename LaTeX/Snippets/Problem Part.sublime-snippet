@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 \subsection*{$1}
-\begin{center}\textcolor{red}{=======TODO=======}\end{center} % RedNote
+\RedNote{TODO}
 
 $0
 ]]></content>

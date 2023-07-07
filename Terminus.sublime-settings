@@ -20,20 +20,20 @@
     "selection": "#c1ddff",
     "selection_foreground": "#000000",
   },
-  // start with tmux
-  "shell_configs": [
-    {
-      "name": "Zsh Tmux",
-      "shell_cmd": "zsh -li -c \"tmux -2\"",
-      "env": {},
-      "enable": true,
-      "platforms": [
-        "linux",
-        "osx"
-      ],
-    }
-  ],
+  // // start with tmux
+  // "shell_configs": [
+  //   {
+  //     "name": "Zsh Tmux",
+  //     "shell_cmd": "zsh -li -c \"tmux -2\"",
+  //     "env": {},
+  //     "enable": true,
+  //     "platforms": [
+  //       "linux",
+  //       "osx"
+  //     ],
+  //   }
+  // ],
   "default_config": {
-    "osx": "Zsh Tmux",
+    "osx": "Zsh",
   },
 }

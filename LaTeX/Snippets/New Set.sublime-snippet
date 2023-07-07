@@ -1,14 +1,7 @@
 <snippet>
     <content><![CDATA[
 \documentclass[a4paper, 12pt]{article}
-\usepackage{fullpage}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{graphicx}
-\usepackage{xcolor}
-
+\input{~/Library/Application Support/Sublime Text/Packages/User/LaTeX/set_preamble.tex}
 
 \title{${1:CS 21 Set 1}}
 \author{${2:Brady Bhalla}}

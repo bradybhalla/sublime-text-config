@@ -3,6 +3,7 @@
     "Vintage",
   ],
   "font_size": 19,
+  "theme": "Default Dark.sublime-theme",
   "color_scheme": "Mariana.sublime-color-scheme",
 
   // I added these vvv
@@ -11,4 +12,11 @@
   "show_panel_on_build": false,
   "tab_size": 2,
   // ^^^
+  "close_windows_when_empty": true,
+  "added_words":
+  [
+		"ribosomes",
+    "ribosome",
+  ],
+  "minimap_horizontal_scrolling": true,
 }

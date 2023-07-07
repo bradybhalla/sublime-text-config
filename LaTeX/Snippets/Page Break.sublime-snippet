@@ -1,9 +1,7 @@
 <snippet>
     <content><![CDATA[
-\begin{align*}
-  $0
-\end{align*}
+\pagebreak
 ]]></content>
-    <tabTrigger>ali</tabTrigger>
+    <tabTrigger>pg</tabTrigger>
     <scope>text.tex.latex</scope>
 </snippet>

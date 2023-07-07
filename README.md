@@ -33,8 +33,7 @@ Note: This will overwrite the current preferences and packages.
 - sublime-matrix-calculator
   - I made it!
 - Color Highlight
-- AutoFoldCode
-  - Store folded code and selections
+- RemoteSubl
 - *see all packages in* [Package Control.sublime-settings](Package%20Control.sublime-settings)
 
 ### Keybinds

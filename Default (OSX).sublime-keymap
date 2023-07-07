@@ -16,6 +16,10 @@
   { "keys": ["command+shift+o"], "command": "open_finder" },
 
 
+  // copy file path
+  { "keys": ["command+shift+c"], "command": "copy_path" },
+
+
 
   /*
   ############
@@ -25,28 +29,28 @@
 
   { "keys": ["option+`"], "command": "toggle_terminus_panel" },
 
-    // open Terminus view (as a tab)
-    {
-    "keys": ["option+shift+`"], "command": "terminus_open", "args": {
-      "cwd": "${file_path:${folder}}"
-    }
-  },
+  // // open Terminus view (as a tab)
+  // {
+  //   "keys": ["option+shift+`"], "command": "terminus_open", "args": {
+  //     "cwd": "${file_path:${folder}}"
+  //   }
+  // },
 
-  // Change Terminus panel/view to a view/panel
-  {
-    "keys": ["option+up"],
-    "command": "terminus_maximize",
-    "context": [
-      {"key": "terminus_view"}
-    ]
-  },
-  {
-    "keys": ["option+down"],
-    "command": "terminus_minimize",
-    "context": [
-      {"key": "terminus_view"}
-    ]
-  },
+  // // Change Terminus panel/view to a view/panel
+  // {
+  //   "keys": ["option+up"],
+  //   "command": "terminus_maximize",
+  //   "context": [
+  //     {"key": "terminus_view"}
+  //   ]
+  // },
+  // {
+  //   "keys": ["option+down"],
+  //   "command": "terminus_minimize",
+  //   "context": [
+  //     {"key": "terminus_view"}
+  //   ]
+  // },
 
 
 
@@ -57,23 +61,35 @@
   */
 
   {
-    "keys": ["option+f"],
+    "keys": ["ctrl+f"],
     "command": "lsp_format_document",
     "context": [{"key": "lsp.session_with_capability", "operand": "documentFormattingProvider | documentRangeFormattingProvider"}]
   },
 
-  {
-    "keys": ["command+es"],
-        "command": "lsp_next_diagnostic",
-        "context": [{"key": "lsp.session_with_capability", "operand": "hoverProvider"}]
-    },
+  { 
+    "keys": ["ctrl+f"],
+    "command": "auto_pep8",
+    "args": {"preview": false},
+    "context": [{"key":"selector", "operand": "source.python"}]
+  },
 
-    // lsp quick fix
-    {
-      "keys": ["command+shift+e"],
-      "command": "lsp_code_actions",
-      "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider"}]
-    },
+  {
+      "keys": ["ctrl+d"],
+      "command": "lsp_symbol_definition",
+      "context": [{"key": "setting.lsp_active"}]
+  },
+
+  {
+      "keys": ["ctrl+r"],
+      "command": "lsp_symbol_references",
+      "context": [{"key": "setting.lsp_active"}]
+  },
+
+  {
+    "keys": ["ctrl+e"],
+      "command": "lsp_next_diagnostic",
+      "context": [{"key": "setting.lsp_active"}]
+  },
 
   {
     "keys": ["ctrl", "ctrl"],

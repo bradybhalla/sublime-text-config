@@ -19,7 +19,19 @@
       $(this).removeClass("lighten");
     });
 
-
+    // hover over emphasized word to highlight all emphasized words
+    $("strong").on("mouseenter", function(){
+      $("strong").addClass("highlight");
+    });
+    $("strong").on("mouseleave", function(){
+      $("strong").removeClass("highlight");
+    });
+    $("em").on("mouseenter", function(){
+      $("em").addClass("highlight");
+    });
+    $("em").on("mouseleave", function(){
+      $("em").removeClass("highlight");
+    });
     
     $("ol").each(function(){
       // my browser is doing annoying case insensitive things
@@ -46,21 +58,53 @@
     --background-color: rgb(60, 60, 60);
     --text-color: rgb(200, 200, 200);
 
+    --highlight-background: rgb(200, 200, 200);
+    --highlight-text: rgb(60, 60, 60);
+
+    --emphasis-background: rgb(80, 80, 80);
+
     --link-color: rgb(173, 216, 230);
     --nav-background-color: rgba(173, 216, 230, 0.06);
 
     --code-background-color: rgb(30, 30, 30);
     --code-lighten-color: rgb(80, 80, 80);
 
-    --list-mark-color: rgb(120, 120, 120);
+    --list-mark-color: rgb(150, 150, 150);
   }
 
+  /*###########
+    # General #
+    ###########*/
+
   html, body {
-    background: var(--background-color);
+    background-color: var(--background-color);
     color: var(--text-color);
     font-size: 18px;
     -webkit-print-color-adjust:exact !important;
     print-color-adjust:exact !important;
+  }
+
+  strong, em {
+    background-color: var(--emphasis-background);
+  }
+
+  .highlight {
+    background-color: var(--highlight-background);
+    color: var(--highlight-text);
+  }
+
+  /*###########
+    # Headers #
+    ###########*/
+  header {
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.5em;
+    text-decoration: underline;
+  }
+  header p {
+    text-align: left;
   }
 
   /*#################
@@ -114,7 +158,6 @@
   ul > li:before, ol > li:before {
     position: relative;
     left: -10px;
-    font-size: 16px;
     color: var(--list-mark-color);
   }
   ul > li:before {

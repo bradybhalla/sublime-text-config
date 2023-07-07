@@ -1,9 +1,7 @@
 <snippet>
     <content><![CDATA[
-\begin{center}\textcolor{red}{=======${1:TODO}=======}\end{center} % RedNote
-
-$0
+\RedNote{${0:TODO}}
 ]]></content>
-    <tabTrigger>note</tabTrigger>
+    <tabTrigger>rn</tabTrigger>
     <scope>text.tex.latex</scope>
 </snippet>

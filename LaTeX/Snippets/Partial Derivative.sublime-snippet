@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+\frac{\partial $1}{\partial ${2:x}}
+]]></content>
+    <tabTrigger>partial</tabTrigger>
+    <scope>text.tex.latex meta.environment.math</scope>
+</snippet>

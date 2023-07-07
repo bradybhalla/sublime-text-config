@@ -1,4 +1,13 @@
 [
+  // lsp hover
+  {
+    "keys": ["shift+ctrl", "shift+ctrl"],
+    "command": "lsp_hover",
+    "context": [
+      { "key": "lsp.session_with_capability", "operand": "hoverProvider" }
+    ]
+  },
+
   // make ending "$" in LaTeX
   {
     "keys": ["$"],
@@ -38,6 +47,14 @@
     "context": [{"key":"selector", "operand":"text.tex.latex"}]
   },
 
+  // two q's = quad space
+  {
+    "keys": ["q", "q"],
+    "command": "insert",
+    "args": {"characters": "\\quad"},
+    "context": [{"key":"selector", "operand":"text.tex.latex"}]
+  },
+
   // new line with \noindent
   {
     "keys": ["shift+enter"],
@@ -63,27 +80,6 @@
     "context": [
       {"key":"selector", "operand":"text.tex.latex"},
       {"key":"following_text", "operator": "regex_match", "operand": "\\\\\\w+.*$", "match_all": true }
-    ]
-  },
-
-  // delete line ending in RedNote (which I use to leave messages for myself)
-  // use "RedNote" or "Problem Part" snippet to create
-  {
-    "keys": ["backspace"],
-    "command": "run_macro_file",
-    "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"},
-    "context": [
-      {"key":"selector", "operand":"text.tex.latex"},
-      {"key":"following_text", "operator": "regex_match", "operand": ".*% RedNote$", "match_all": true }
-    ]
-  },
-  {
-    "keys": ["backspace"],
-    "command": "run_macro_file",
-    "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"},
-    "context": [
-      {"key":"selector", "operand":"text.tex.latex"},
-      {"key":"preceding_text", "operator": "regex_match", "operand": "^.*% RedNote", "match_all": true }
     ]
   },
 
@@ -150,14 +146,6 @@
     "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
   },
 
-  // | with space around it
-  {
-    "keys": [" ", "|"],
-    "command": "insert",
-    "args": {"characters": " \\,|\\, "},
-    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
-  },
-
   // fractions
   {
     "keys": ["/","/"],
@@ -215,19 +203,19 @@
     "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
   },
 
+  // => for implies (\Rightarrow)
+  {
+    "keys": ["=", ">"],
+    "command": "insert",
+    "args": {"characters": "\\Rightarrow "},
+    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
+  },
+
   // ~~ is \approx
   {
     "keys": ["~", "~"],
     "command": "insert",
     "args": {"characters": "\\approx "},
-    "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
-  },
-
-  // two d's = \mathrm{d}
-  {
-    "keys": ["d", "d"],
-    "command": "insert",
-    "args": {"characters": "\\mathrm{d}"},
     "context": [{"key":"selector", "operand":"text.tex.latex meta.environment.math"}]
   }
 
