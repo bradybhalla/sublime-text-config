@@ -100,6 +100,34 @@
     ]
   },
 
+  /*
+  ###########
+  # Copilot #
+  ###########
+  */
+  {
+    "keys": ["option+;"],
+    "command": "copilot_accept_completion",
+    "context": [
+        {
+            "key": "setting.copilot.completion.is_visible"
+        }
+    ]
+  },
+  {
+    "keys": ["option+shift+;"],
+    "command": "copilot_reject_completion",
+    "context": [
+        {
+            "key": "setting.copilot.completion.is_visible"
+        }
+    ]
+  },
+  // {
+  //   "keys": ["option+shift+;"],
+  //   "command": "copilot_ask_completions",
+  //   "context": [{"key": "setting.lsp_active"}]
+  // },
 
 
   /*

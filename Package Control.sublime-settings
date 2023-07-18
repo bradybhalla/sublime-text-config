@@ -13,6 +13,7 @@
 		"Git",
 		"LSP",
 		"LSP-clangd",
+		"LSP-copilot",
 		"LSP-json",
 		"LSP-pyright",
 		"LSP-TexLab",
