@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[
-\RedNote{${0:TODO}}
-]]></content>
-    <tabTrigger>rn</tabTrigger>
-    <scope>text.tex.latex</scope>
-</snippet>

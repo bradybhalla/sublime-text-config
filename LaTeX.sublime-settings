@@ -1,7 +1,0 @@
-// These settings override both User and Default settings for the LaTeX syntax
-{
-    // I added these vvv
-    "spell_check": true,
-    "auto_complete": true,
-    "auto_complete_selector": "text.tex - meta.section", // should equal selector in lsp settings
-}

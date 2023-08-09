@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[
-\pagebreak
-]]></content>
-    <tabTrigger>pg</tabTrigger>
-    <scope>text.tex.latex</scope>
-</snippet>

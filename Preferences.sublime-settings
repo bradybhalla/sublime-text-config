@@ -5,18 +5,9 @@
   "font_size": 19,
   "theme": "Default Dark.sublime-theme",
   "color_scheme": "Mariana.sublime-color-scheme",
-
-  // I added these vvv
+  
   "translate_tabs_to_spaces": true,
   "auto_complete_commit_on_tab": true,
   "show_panel_on_build": false,
-  "tab_size": 2,
-  // ^^^
-  "close_windows_when_empty": true,
-  "added_words":
-  [
-		"ribosomes",
-    "ribosome",
-  ],
-  "minimap_horizontal_scrolling": true,
+  "tab_size": 4,
 }

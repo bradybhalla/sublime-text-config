@@ -5,12 +5,6 @@
   ###########
   */
 
-  // simulate right click
-  {
-    "keys": ["ctrl", "ctrl"],
-    "command": "context_menu"
-  },
-
   { "keys": ["command+shift+m"], "command": "toggle_minimap" },
 
   { "keys": ["command+shift+o"], "command": "open_finder" },
@@ -18,40 +12,6 @@
 
   // copy file path
   { "keys": ["command+shift+c"], "command": "copy_path" },
-
-
-
-  /*
-  ############
-  # Terminus #
-  ############
-  */
-
-  { "keys": ["option+`"], "command": "toggle_terminus_panel" },
-
-  // // open Terminus view (as a tab)
-  // {
-  //   "keys": ["option+shift+`"], "command": "terminus_open", "args": {
-  //     "cwd": "${file_path:${folder}}"
-  //   }
-  // },
-
-  // // Change Terminus panel/view to a view/panel
-  // {
-  //   "keys": ["option+up"],
-  //   "command": "terminus_maximize",
-  //   "context": [
-  //     {"key": "terminus_view"}
-  //   ]
-  // },
-  // {
-  //   "keys": ["option+down"],
-  //   "command": "terminus_minimize",
-  //   "context": [
-  //     {"key": "terminus_view"}
-  //   ]
-  // },
-
 
 
   /*
@@ -76,79 +36,18 @@
   {
       "keys": ["ctrl+d"],
       "command": "lsp_symbol_definition",
-      "context": [{"key": "setting.lsp_active"}]
+      "context": [{"key": "lsp.session_with_capability", "operand": "definitionProvider"}]
   },
 
   {
       "keys": ["ctrl+r"],
       "command": "lsp_symbol_references",
-      "context": [{"key": "setting.lsp_active"}]
+      "context": [{"key": "lsp.session_with_capability", "operand": "referencesProvider"}]
   },
 
   {
     "keys": ["ctrl+e"],
       "command": "lsp_next_diagnostic",
       "context": [{"key": "setting.lsp_active"}]
-  },
-
-  {
-    "keys": ["ctrl", "ctrl"],
-    "command": "lsp_hover",
-    "context": [
-      { "key" : "selector", "operand" : "-text.tex.latex" },
-      { "key": "lsp.session_with_capability", "operand": "hoverProvider" }
-    ]
-  },
-
-  /*
-  ###########
-  # Copilot #
-  ###########
-  */
-  {
-    "keys": ["option+;"],
-    "command": "copilot_accept_completion",
-    "context": [
-        {
-            "key": "setting.copilot.completion.is_visible"
-        }
-    ]
-  },
-  {
-    "keys": ["option+shift+;"],
-    "command": "copilot_reject_completion",
-    "context": [
-        {
-            "key": "setting.copilot.completion.is_visible"
-        }
-    ]
-  },
-  // {
-  //   "keys": ["option+shift+;"],
-  //   "command": "copilot_ask_completions",
-  //   "context": [{"key": "setting.lsp_active"}]
-  // },
-
-
-  /*
-  #########
-  # Other #
-  #########
-  */
-
-  // Custom layout (also in Main.sublime-menu)
-  {
-    "keys": ["command+option+5"],
-    "command": "set_layout",
-    "args":
-    {
-      "cols": [0.0, 0.5, 1.0 ],
-      "rows": [0.0, 0.5, 1.0 ],
-      "cells": [
-        [0, 0, 1, 1 ],
-        [0, 1, 1, 2 ],
-        [1, 0, 2, 2 ]
-      ]
-    }
   }
 ]
