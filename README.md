@@ -1,6 +1,6 @@
 # sublime-text-config
 
-My minimal Sublime Text config now that I no longer use it as my main editor.  Check the `old-config` to see my old config.
+My minimal Sublime Text config now that I no longer use it as my main editor.  Check the `old-config` branch to see my old config.
 
 ## Setup Instructions
 1) Move the contents of this repository to the `User` folder.  On macOS, this is probably located at `~/Library/Application\ Support/Sublime\ Text/Packages/User`.
