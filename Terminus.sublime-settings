@@ -2,10 +2,10 @@
   // I added these vvv
   "view_settings": {
     // works with powerlevel10k
-    "font_face": "MesloLGS NF",
+    "font_face": "MesloLGS Nerd Font",
     "font_size": 14,
     "font_options": [
-      "no_antialias"
+      // "no_antialias"
     ],
   },
   // same colors as iTerm
@@ -20,19 +20,6 @@
     "selection": "#c1ddff",
     "selection_foreground": "#000000",
   },
-  // // start with tmux
-  // "shell_configs": [
-  //   {
-  //     "name": "Zsh Tmux",
-  //     "shell_cmd": "zsh -li -c \"tmux -2\"",
-  //     "env": {},
-  //     "enable": true,
-  //     "platforms": [
-  //       "linux",
-  //       "osx"
-  //     ],
-  //   }
-  // ],
   "default_config": {
     "osx": "Zsh",
   },
