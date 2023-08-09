@@ -1,5 +1,7 @@
 # sublime-text-config
 
+This is my Sublime Text config from when I used it as my main editor. I have now simplified it greatly.
+
 ## Setup Instructions
 1) Move the contents of this repository to the `User` folder.  On macOS, this is probably located at `~/Library/Application\ Support/Sublime\ Text/Packages/User`.
 2) Open the command palette (`Cmd + Shift + P`) and type `Install Package Control` if Package Control is not already installed.
